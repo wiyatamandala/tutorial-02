@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Calcu-Convert</title>
+    </head>
+    <body>
+        <h1>Calcu-Convert</h1>
+        <form th:action="@{/calculatorView}" th:object="${prosesKalkulasi}" method="post">
+            <table>
+			    <tr>
+			        <td><label for="angka_satu">Bilangan pertama</label></td>
+            		<td><input type="text" id="angka1" name="angka1" /></td>
+			    </tr>
+			    <tr>
+			        <td><label for="angka_dua">Bilangan kedua</label></td>
+            		<td><input type="text" id="angka2" name="angka2" /></td>
+			    </tr>
+			    <tr>
+			    	<td></td>
+			        <td align ="right"><input type="submit" value="Jumlahkan" /></td>
+			    </tr>
+			    <tr>
+			        <td><label for="hasil">Hasil</label></td>
+            		<td><input th:type="text" th:name="hasil" th:value="${hasil}" /></td>
+			    </tr>
+			    <tr>
+			        <td><label for="terbilang">Terbilang</label></td>
+            		<td><input th:type="text" th:name="terbilang" th:value="${terbilang}" /></td>
+			    </tr>
+			</table>
+        </form>
+    </body>
+</html>
